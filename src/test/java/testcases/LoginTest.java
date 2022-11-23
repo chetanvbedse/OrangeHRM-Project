@@ -70,4 +70,13 @@ public class LoginTest  extends TestNGListeners{
 		test.info("Error msg is : "+LoginPage.ActualMsg);
 	}
 	
+	@Test(priority = 7)
+	public void validatelogin1() throws IOException
+	{
+		test.info("Entering credentials");
+		lp.loginToWeb(ExcelReader.readData(2, 1, "Sheet1"),ExcelReader.readData(3, 1, "Sheet1"));
+		test.info("Entered creds are: "+ExcelReader.readData(2, 1, "Sheet1")+" "+ExcelReader.readData(3, 1, "Sheet1"));
+
+	}
+	
 }

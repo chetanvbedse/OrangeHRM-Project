@@ -13,4 +13,11 @@ public class DashbordTest extends TestNGListeners{
 	{
 	    dp.openAdminTab();
 	}
+	
+	
+	@Test(priority = 8)
+	public void validatePimTab()
+	{
+		dp.openPimTab();
+	}
 }
