@@ -20,4 +20,11 @@ public class DashbordTest extends TestNGListeners{
 	{
 		dp.openPimTab();
 	}
+	
+	@Test(priority = 9)
+	public void validateLeaveTab()
+	{
+		dp.openLeaveTab();
+	}
+	
 }

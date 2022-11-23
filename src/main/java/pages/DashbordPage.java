@@ -2,6 +2,7 @@ package pages;
 
 import java.util.List;
 
+import org.bouncycastle.pqc.jcajce.provider.rainbow.SignatureSpi.withSha224;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -36,8 +37,38 @@ public class DashbordPage {
 	@FindBy(xpath = "(//*[@class='oxd-topbar-body-nav-tab-item'])[3]")
 	private WebElement organisationtab;
 	
-	@FindBy(xpath = "//*[@class='oxd-main-menu-item active']")
+	@FindBy(xpath = "//*[text()='General Information']")
+	private WebElement generalinformation;
+	
+	@FindBy(xpath = "//*[text()='Locations']")
+	private WebElement locations;
+	
+	@FindBy(xpath = "//*[text()='Structure']")
+	private WebElement structure;
+	
+	@FindBy(xpath = "(//*[@class='oxd-topbar-body-nav-tab-item'])[4]")
+	private WebElement qulifications;
+	
+	@FindBy(xpath = "(//*[@class='oxd-topbar-body-nav-tab-item'])[5]")
+	private WebElement nationalities;
+	
+	@FindBy(xpath = "(//*[@class='oxd-topbar-body-nav-tab-item'])[6]")
+	private WebElement corporatebranding;
+	
+	@FindBy(xpath = "(//*[@class='oxd-topbar-body-nav-tab-item'])[6]")
+	private WebElement confrigration;
+	
+	@FindBy(xpath = "(//*[text()='PIM'])[1]")
 	private WebElement pimtab;
+	
+	@FindBy(xpath = "//*[text()='Configuration ']")
+	private WebElement confrigrationpimtab;
+	
+	@FindBy(xpath = "//*[text()='Employee List']")
+	private WebElement employee;
+	
+	@FindBy(xpath = "(//*[text()='Leave'])[1]")
+	private WebElement leavetab;
 	
 	WebDriver driver;
 	
@@ -68,10 +99,28 @@ public class DashbordPage {
 		jobtab.click();
 		workshifts.click();
 		organisationtab.click();
+		generalinformation.click();
+		organisationtab.click();
+		locations.click();
+		organisationtab.click();
+		structure.click();
+		qulifications.click();
+		nationalities.click();
+		corporatebranding.click();
+		confrigration.click();
+		
+		
 	}
 	
 	public void openPimTab()
 	{
 		pimtab.click();
+		confrigrationpimtab.click();
+		employee.click();
+	}
+	
+	public void openLeaveTab()
+	{
+		leavetab.click();
 	}
 }
