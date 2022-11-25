@@ -70,6 +70,9 @@ public class DashbordPage {
 	@FindBy(xpath = "(//*[text()='Leave'])[1]")
 	private WebElement leavetab;
 	
+	@FindBy(xpath = "(//*[@placeholder='yyyy-mm-dd'])[1]")
+	private WebElement calender;
+	
 	WebDriver driver;
 	
 	public DashbordPage(WebDriver driver)
@@ -122,5 +125,7 @@ public class DashbordPage {
 	public void openLeaveTab()
 	{
 		leavetab.click();
+		calender.click();
+		calender.sendKeys("2021-09-13");
 	}
 }
