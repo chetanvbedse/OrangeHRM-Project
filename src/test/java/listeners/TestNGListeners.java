@@ -33,6 +33,17 @@ public class TestNGListeners extends BaseTest implements ITestListener{
 		System.out.println("Test case :"+result.getMethod().getMethodName()+" has been passed");
 
 		test.log(Status.PASS, "Test case is passed");
+		try 
+		{
+//			ScreenShot.captureScreenShot(driver, result.getMethod().getMethodName());
+			
+			test.addScreenCaptureFromPath(ScreenShot.captureScreenShotWithPath(driver, result.getName()));
+		}
+		catch (IOException e) 
+		{
+			System.out.println("Exception arrived catch is running");
+			
+		}
 	}
 
 	@Override
