@@ -2,7 +2,6 @@ package pages;
 
 import java.util.List;
 
-import org.bouncycastle.pqc.jcajce.provider.rainbow.SignatureSpi.withSha224;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -70,6 +69,9 @@ public class DashbordPage {
 	@FindBy(xpath = "(//*[text()='Leave'])[1]")
 	private WebElement leavetab;
 	
+	@FindBy(xpath = "//*[text()='Apply']")
+	private WebElement applytab;
+	
 	@FindBy(xpath = "(//*[@placeholder='yyyy-mm-dd'])[1]")
 	private WebElement calender;
 	
@@ -125,6 +127,8 @@ public class DashbordPage {
 	public void openLeaveTab()
 	{
 		leavetab.click();
+		applytab.click();
+		
 		calender.click();
 		calender.sendKeys("2021-09-13");
 	}
