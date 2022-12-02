@@ -127,8 +127,7 @@ public class DashbordPage {
 	public void openLeaveTab()
 	{
 		leavetab.click();
-		applytab.click();
-		
+		applytab.click();	
 		calender.click();
 		calender.sendKeys("2021-09-13");
 	}
